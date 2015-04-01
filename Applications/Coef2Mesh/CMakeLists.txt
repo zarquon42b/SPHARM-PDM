@@ -1,0 +1,24 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+PROJECT(Coef2Mesh)
+
+SET (COEF2MESH Coef2Mesh)
+
+SET(${COEF2MESH}_SOURCE
+Coef2Mesh.cxx itkMeshTovtkPolyData.cxx
+)
+
+add_executable(${COEF2MESH} ${${COEF2MESH}_SOURCE})
+target_link_libraries(${COEF2MESH} ${ITK_LIBRARIES} ${VTK_LIBRARIES} ShapeIO SpatialObject ShapeAlgorithms SpatialObject SparseMatrixLib )
+
+if( NOT EXTENSION_SUPERBUILD_BINARY_DIR )
+ install(TARGETS
+   Coef2Mesh
+   BUNDLE DESTINATION  bin
+   RUNTIME DESTINATION bin
+   LIBRARY DESTINATION lib
+   ARCHIVE DESTINATION lib/static  
+ )
+else()
+  install(TARGETS Coef2Mesh DESTINATION ${${LOCAL_PROJECT_NAME}_CLI_INSTALL_RUNTIME_DESTINATION} )
+endif()
