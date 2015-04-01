@@ -1299,7 +1299,7 @@ void SphericalHarmonicPolynomial<TDimension>::GetOneRidgePoint(unsigned int from
     std::ofstream out;
     out.open("test.txt" );
     out << "NUMBER_OF_POINTS=9999" << std::endl << "DIMENSION=3" << std::endl << "TYPE=Curve" << std::endl;
-    for( int i = 1; i < LENGTH; i++ )
+    for( int i = 1; i < LENGTH-1; i++ )
       {
       prev = current;
       current = next;
