@@ -113,6 +113,7 @@ option(COMPILE_SpharmTool "Compile SpharmTool." ON)
 if(COMPILE_SpharmTool)
   add_subdirectory(SpharmTool)
 endif(COMPILE_SpharmTool)
+
 option(COMPILE_Coef2Mesh "Compile Coef2Mesh." ON)
 if(COMPILE_Coef2Mesh)
   add_subdirectory(Coef2Mesh)

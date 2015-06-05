@@ -127,6 +127,7 @@ option(COMPILE_ParaToSPHARMMeshCLP "Compile ParaToSPHARMMeshCLP." ON)
 option(COMPILE_SpharmTool "Compile SpharmTool." ON)
 option(COMPILE_ShapeAnalysisModule "Compile ShapeAnalysisModule." ON)
 option(COMPILE_ParticleModule "Compile ParticleModule." OFF)
+option(COMPILE_Coef2Mesh "Compile Coef2Mesh." ON)
 
 #------------------------------------------------------------------------------
 # ${LOCAL_PROJECT_NAME} dependency list
